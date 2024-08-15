@@ -37,3 +37,44 @@ git clone https://github.com/ezequielquiroz/mi-proyecto.git
 ```
 
 Este comando descargará una copia completa del repositorio en tu máquina local, incluyendo todos los archivos, el historial de commits, las ramas, y demás.
+
+
+Puedes crear una etiqueta (tag) tanto antes como después de enviar (push) tu commit al repositorio remoto, pero lo más común y recomendable es crear la etiqueta **después** de realizar el commit, y **antes** de enviarlo al repositorio remoto. Esto te permite incluir la etiqueta en el push hacia el repositorio remoto junto con el commit etiquetado.
+
+### Pasos para etiquetar y enviar al repositorio remoto:
+
+1. **Realiza el commit:**
+   ```bash
+   git add .
+   git commit -m "Descripción del commit"
+   ```
+
+2. **Crea la etiqueta:**
+   - Puedes crear una etiqueta anotada, que incluye un mensaje, un autor, y una fecha:
+     ```bash
+     git tag -a v1.0 -m "Versión 1.0"
+     ```
+   - O una etiqueta ligera, que es simplemente un apuntador a un commit:
+     ```bash
+     git tag v1.0
+     ```
+
+3. **Envía el commit y la etiqueta al repositorio remoto:**
+   - Para enviar el commit:
+     ```bash
+     git push origin main  # O la rama en la que estés trabajando
+     ```
+   - Para enviar la etiqueta:
+     ```bash
+     git push origin v1.0
+     ```
+   - Si quieres enviar todas las etiquetas de una vez:
+     ```bash
+     git push origin --tags
+     ```
+
+### Resumen:
+- **Creas la etiqueta después del commit.**
+- **Luego envías tanto el commit como la etiqueta al repositorio remoto.**
+
+Esto asegura que la etiqueta se refiere al commit correcto y permite que tanto el commit como la etiqueta estén disponibles en el repositorio remoto.
