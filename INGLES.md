@@ -107,6 +107,12 @@
 
 ---
 
+**Ejecucion del juego**
+
+"Now, I will proceed to run the game so that you can see how the game's presentation works."
+
+---
+
 **Despedida:**
 
 "Good teacher, that's all from my side, please forgive my pronunciation mistakes, anyway I hope it was understood well. Thank you, goodbye."
